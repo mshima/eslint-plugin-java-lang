@@ -4,8 +4,16 @@ updates:
     directory: '/'
     schedule:
       interval: weekly
-    ignore:
+    groups:
+      vitest:
+        patterns:
+          - vitest
+          - '@vitest/*'
+    allow:
       - dependency-name: '*'
+        update-types:
+          - version-update:semver-major
+      - dependency-name: tree-sitter-java-orchard
         update-types:
           - version-update:semver-minor
           - version-update:semver-patch
