@@ -9,11 +9,9 @@ updates:
         patterns:
           - vitest
           - '@vitest/*'
-    ignore:
-      - dependency-name: '*'
-        update-types:
-          - version-update:semver-minor
-          - version-update:semver-patch
+    allow:
+      - update-types:
+          - version-update:semver-major
     allow:
       - dependency-name: tree-sitter-java-orchard
         update-types:
